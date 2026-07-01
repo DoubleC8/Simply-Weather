@@ -1,0 +1,16 @@
+:root {
+  --background-color: #2c2f33;
+  --text-color: #ffffff;
+  --main-color: #5d3fd3;
+  --darker-background: #23272a;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+tr {
+  border-bottom: 1px solid #23272a;
+}

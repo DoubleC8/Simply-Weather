@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/caf383abfd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="w-full h-64 bg-gray-900 static bottom-0 p-5 flex flex-col gap-5">
+    <section class="w-full h-fit-content flex flex-col gap-3 p-3">
+      <h1 class="font-bold text-[var(--main-color)] text-2xl">
+        Simply Weather
+      </h1>
+
+      <div class="w-full h-full flex flex-col items-center gap-3">
+        <p class="city-name text-2xl font-bold">Search a City</p>
+
+        <div class="flex items-center gap-3">
+          <div class="weather-icon text-5xl text-[var(--main-color)]">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <p class="temp text-5xl">--&deg;</p>
+        </div>
+
+        <div class="font-semibold flex flex-col items-center text-gray-500">
+          <p class="feelsLike">Feels like --&deg;</p>
+          <div class="flex gap-3">
+            <p class="condition">Awaiting forecast...</p>
+            <p class="high-low">L: --&deg; H: --&deg;</p>
+          </div>
+        </div>
+
+        <span class="msg text-red-400 text-sm"></span>
+      </div>
+    </section>
+
+    <section
+      class="w-full h-fit-content flex flex-col gap-3 p-3 bg-[var(--background-color)] rounded-xl"
+    >
+      <p class="text-[var(--main-color)]">5-DAY FORECAST</p>
+      <table table class="w-full font-semibold text-lg">
+        <thead>
+          <th></th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody class="forecastTableBody"></tbody>
+      </table>
+    </section>
+
+    <section
+      class="w-full h-fit-content flex flex-col gap-3 p-3 bg-[var(--background-color)] rounded-xl font-semibold text-lg"
+    >
+      <p class="text-[var(--main-color)]">WIND</p>
+      <div>
+        <p class="wind-mph"></p>
+        <p class="gusts-mph"></p>
+        <p class="wind-direction"></p>
+      </div>
+    </section>
+
+    <section class="w-full h-fit-content flex gap-3">
+      <div
+        class="bg-[var(--background-color)] rounded-xl w-full h-fit-content p-3"
+      >
+        <p class="text-[var(--main-color)]">SUNSET</p>
+        <p class="sunset text-2xl font-bold"></p>
+        <p class="sunrise font-semibold text-[var(--main-color)]"></p>
+      </div>
+      <div
+        class="bg-[var(--background-color)] rounded-xl w-full h-fit-content p-3"
+      >
+        <p class="text-[var(--main-color)]">HUMIDITY</p>
+        <p class="humidity text-3xl font-bold"></p>
+      </div>
+    </section>
+
+    <footer
+      class="h-fit-content bg-[var(--darker-background)] flex justify-center items-center p-3 fixed bottom-0 left-0 w-full"
+    >
+      <form class="h-[60px] w-full flex justify-between">
+        <input
+          class="h-full grow pl-2 rounded-l-xl bg-transparent/40 focus:outline-none focus:ring-0"
+          type="text"
+          placeholder="Search for a City"
+          autofocus
+        />
+        <button
+          class="h-full px-5 rounded-r-xl bg-transparent/40"
+          type="submit"
+        >
+          &#128269;
+        </button>
+      </form>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
